@@ -1,0 +1,14 @@
+(defpoll LANG  :interval "0.1s" `~/.config/eww/scripts/kb_layout.sh`)
+(defpoll AUDIO :interval "0.1s" `~/.config/eww/scripts/audio.sh`)
+(defpoll TIME  :interval "1s" `~/.config/eww/scripts/time.sh`)
+
+(defwidget right []
+  (box :orientation "h"
+       :space-evenly "false"
+       :spacing 1
+       :halign "end"
+       (label :class "LANG" :text LANG)
+       (button :class "audio" :onclick "eww open volumec" " ^") ;; Кнопка с текстом из AUDIO
+       (label :class "audio" :text AUDIO) ;; Кнопка с текстом из AUDIO
+       (label :class "time" :text TIME)
+       (button :class "fmenu" :onclick "eww open ffmenu" "  ")))

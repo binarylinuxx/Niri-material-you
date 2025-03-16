@@ -1,0 +1,4 @@
+* {
+    bg: {{colors.on_secondary.dark.hex}};
+    fg: {{colors.primary.dark.hex}};
+}

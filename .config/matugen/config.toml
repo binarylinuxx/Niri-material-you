@@ -1,0 +1,26 @@
+[config]
+
+[templates.alacritty]
+input_path = 'colors.toml'
+output_path = '~/.config/alacritty/colors.toml'
+
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+set = true
+
+
+[templates.eww]
+input_path = 'colors-eww.scss'
+output_path = '~/.config/eww/colors.scss'
+scheme = "dark"
+
+[templates.pywalfox]
+input_path = 'pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+scheme = "dark"
+
+[templates.rofi]
+input_path = 'template.rasi'
+output_path = '~/.config/rofi/colors.rasi'

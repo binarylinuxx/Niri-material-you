@@ -1,0 +1,42 @@
+* {
+	font-family: Jetbrains Mono;
+	font-weight: 900;
+}
+
+.workspaces {
+  background: $surface_container_high;
+  padding: 2px 2px; // Unchanged
+  border-radius: 2rem; // Unchanged
+  margin: 2px 1px 2px 1px; // Unchanged
+}
+
+.ws {
+  background: $surface_bright;
+  border-radius: 2rem; // Unchanged
+  color: $primary;
+  min-width: 1rem; // Unchanged
+  margin: 1 2; // Unchanged
+  padding: 0 4; // Unchanged
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: $surface_container_highest;
+  }
+}
+
+.ws-active {
+  background: $primary;
+  margin: 1 2; // Unchanged
+  padding: 0 4; // Unchanged
+  min-width: 1rem; // Unchanged
+  color: $on_primary; // Add text color for active workspace
+  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 1rem;
+
+  &:hover {
+    background: $primary_container;
+  }
+}
+
+
+

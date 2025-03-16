@@ -1,0 +1,7 @@
+(defwindow volumec
+  :monitor 0
+  :hexpand false
+  :vexpand false
+  :class "volumec"
+  :geometry (geometry :x "0" :y "0" :width "500px" :height "20px" :anchor "bottom center")
+  (volume_mic_scale))

@@ -1,0 +1,9 @@
+(include "modules/box_left.yuck") ;; left box of widgets
+(include "modules/box_center.yuck") ;; center widgets box
+(include "modules/box_right.yuck") ;; right widgets box
+(include "control-center.yuck") ;; control widgets center
+(include "windows.yuck") ;; bar 
+(include "modules/fmenu.yuck") ;; floating menu
+(include "modules/c_menu.yuck") ;; volume
+(include "modules/notifs.yuck") ;; volume
+

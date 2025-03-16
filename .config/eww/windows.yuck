@@ -1,0 +1,10 @@
+(defwindow bar
+    :monitor 0
+    :geometry (geometry :width "100%" :anchor "bottom center")
+    :exclusive true
+    (box
+    (left)
+    (center)
+    (right)))
+
+

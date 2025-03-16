@@ -1,0 +1,19 @@
+[font]
+size = 11.5
+
+[font.normal]
+family = "Jetbrains Mono"
+style = "bold"
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 15
+y = 15
+
+[selection]
+save_to_clipboard = true
+
+[general]
+import = ["colors.toml"]

@@ -1,0 +1,55 @@
+prefer-no-csd
+spawn-at-startup "~/.config/niri/autostart.sh"
+
+output "HDMI-A-1" {
+    mode "1920x1080@143.981"
+}
+
+input {
+	keyboard {
+		xkb {
+		    layout "us,ru"
+			options "grp:alt_shift_toggle"
+		}
+	}
+}
+
+environment {
+	DISPLAY ":0"
+}
+
+binds {
+	Mod+Return {spawn "alacritty";}
+	Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+	Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+	Mod+Right                { focus-column-right; }
+	Mod+Left                 { focus-column-left; }
+	Mod+M { maximize-column; }
+	Mod+Q { close-window; }
+	Print { screenshot-screen write-to-disk=true; }
+	Super+T { toggle-window-floating; }
+	Mod+Print { spawn "shot" "region" "wlrclipboard=1"; }
+	Mod+SPACE { spawn "rofi" "-show" "drun"; }
+}
+
+layout {
+	gaps 5
+	border {
+		width 0
+		active-color "#216487"
+		inactive-color "#BAC2DE"
+	}
+	
+	focus-ring {
+		off
+	}
+}
+
+window-rule {
+	geometry-corner-radius 12
+	clip-to-geometry true
+	tab-indicator {
+	    active-color "#216487"
+	    inactive-color "#bac2de"
+	}
+}

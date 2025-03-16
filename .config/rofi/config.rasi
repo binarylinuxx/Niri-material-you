@@ -1,0 +1,92 @@
+@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/colors.rasi"
+
+/* Main Rofi configuration */
+configuration {
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+  display-drun: " Apps";
+  font: "JetBrainsMono Bold 14";
+}
+
+window {
+  background-color: @bg;
+  width: 400;
+  border: 2px solid;
+  border-color: @bg;
+  border-radius: 1em;
+  width: 600;
+}
+
+mainbox {
+  background-color: @bg;
+  padding: 6px;
+  margin: 2px;
+}
+
+inputbar {
+  background-color: @fg;
+  border: 2px solid;
+  border-color: @fg;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+prompt {
+  enabled: false;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "::";
+    background-color: @fg;
+    text-color: @bg;
+}
+
+entry {
+  background-color: @fg;
+  text-color: @bg;
+  cursor: text;
+  placeholder: "Search...";
+  placeholder-color: @bg;
+}
+
+listview {
+  columns: 2;
+  lines: 16;
+  dynamic: true;
+  scrollbar: false;
+  fixed-height: true;
+  fixed-columns: true;
+  background-color: @bg;
+  text-color: @fg;
+  border: 0px 0px 0px 0px;
+}
+
+element {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 4px;
+}
+
+element normal.normal,
+element alternate.normal,
+message,
+error-message {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: @fg;
+  text-color: @bg;
+  border-radius: 5px;
+}
+
+error-message,
+textbox {
+  padding: 3px;
+  background-color: @bg;
+  text-color: @fg;
+}

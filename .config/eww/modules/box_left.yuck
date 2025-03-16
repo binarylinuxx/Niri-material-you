@@ -1,0 +1,31 @@
+(defpoll workspaces :interval "0.01s"
+  "~/.config/eww/scripts/get_ws.sh"
+)
+
+(defwidget workspaces_widget []
+  (box
+    :class "workspaces"
+    :orientation "horizontal"
+    :spacing 0
+    (for workspace in workspaces
+      (button
+        :class {workspace.active ? "ws-active" : "ws"}
+        :onclick "niri msg action focus-workspace ${workspace.name}"
+        :hexpand true
+        "${workspace.name}"
+      )
+    )
+  )
+)
+
+
+(defwidget left []
+  (box
+    :orientation "h"
+    :space-evenly "false"
+    :spacing 2
+    (button :class "button" :onclick "eww open coc" "Power ⏻")
+    (workspaces_widget)
+  )
+)
+

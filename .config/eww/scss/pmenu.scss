@@ -1,0 +1,54 @@
+.rbutton {
+  border: 5px solid $primary;  
+  color: $primary;
+  font-size: 60px;
+  margin: 3 3;
+  padding: 0 0;
+  border-top-right-radius: 10;
+  border-bottom-right-radius: 10;
+}
+
+.lbutton {
+  border: 5px solid $primary;  
+  color: $primary;
+  font-size: 60px;
+  margin: 3 3;
+  padding: 0 14 0 14;
+  border-top-left-radius: 10;
+  border-bottom-left-radius: 10;
+}
+
+.clbutton {
+  border: 5px solid $primary;  
+  color: $primary;
+  font-size: 60px;
+  margin: 3 3;
+  padding: 0 0;
+  border-top-right-radius: 50;
+  border-bottom-right-radius: 50;
+}
+
+.cbutton {
+  border: 5px solid $primary;  
+  color: $primary;
+  font-size: 60px;
+  margin: 3 3;
+  padding: 0 0;
+  border-radius: 10;
+}
+
+.qbutton {
+  border: 5px solid $primary;  
+  color: $primary;
+  font-size: 60px;
+  margin: 3 3;
+  padding: 0 0;
+  border-radius: 10;
+}
+
+.coc {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 0px;
+  background: $on_secondary;  // A brighter surface for the large text
+  font-size: 100px;
+}

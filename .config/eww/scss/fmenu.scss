@@ -1,0 +1,105 @@
+.ffmenu {
+    border-top-left-radius: 1.1rem;
+    border-top-right-radius: 1.1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: $on_secondary;
+    font-size: 50px;
+}
+
+.fbutton {
+    border-radius: 15;
+    background: $primary;
+    color: $on_primary;
+    font-size: 50px;
+    margin: 3px;
+    padding: 0 13;
+}
+
+.weather {
+    border-top-left-radius: 1.1rem;
+    border-top-right-radius: 1.1rem;
+    border-bottom-right-radius: 15;
+    border-bottom-left-radius: 15;
+    background: $primary;
+    color: $on_primary;
+    font-size: 50px;
+    margin: 3px;
+}
+
+.volume-scale trough {
+    background-color: $on_primary;
+    border-radius: 15;
+    min-height: 1rem;
+}
+
+.volume-scale trough highlight {
+    background-color: $primary;
+    border-radius: 15;
+    min-height: 2rem;
+}
+
+.volume-scale highlight {
+    color: $on_primary;
+    border-radius: 1rem;
+}
+
+.volume-arrow {
+    color: $on_primary;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    min-width: 2rem;
+    border-radius: 2rem;
+}
+
+.volume-icon {
+    margin-left: 1.2rem;
+    font-size: 2.3rem;
+    color: $on_primary;
+}
+
+/* Custom scrollbar styles */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+scrollbar trough {
+    background-color: $primary;
+    border-radius: 15px;
+}
+
+scrollbar slider {
+    background-color: $primary_container;
+    border-radius: 15px;
+    min-width: 100px;
+    min-height: 10px;
+}
+
+.no-slider {
+  -slider-background: transparent;
+  -slider-active-background: transparent;
+  -slider-handle: none;
+}
+
+.no-slider slider {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.no-slider slider:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}

@@ -1,0 +1,5 @@
+(defvar apps [
+  { name: "Firefox", exec: "firefox", icon: "/usr/share/icons/hicolor/48x48/apps/firefox.png" },
+  { name: "Terminal", exec: "alacritty", icon: "system-terminal-symbolic" },
+  { name: "Files", exec: "nautilus", icon: "system-file-manager" }
+])

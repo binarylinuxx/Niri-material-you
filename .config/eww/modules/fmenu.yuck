@@ -1,0 +1,61 @@
+(defpoll WEATHER
+  :interval 1
+  `~/.config/eww/scripts/weather.sh`)
+
+(defpoll volume :interval "0.001s" '~/.config/eww/scripts/audio_scroller.sh')
+
+(defpoll mic_volume :interval "0.001s" '~/.config/eww/scripts/get_mc.sh')
+
+(defwidget volume_scale []
+  (overlay :hexpand true
+    (scale :min 0 :max 101 :active {volume != "muted"} :value {volume == "muted" ? 0 : volume} :onchange "pamixer --set-volume {}" :class "volume-scale no-slider")
+    (label :class 'volume-icon ${volume == "muted" ? "less" : volume < 5 ? "less" : "more"}' :halign "start" :text {volume == "muted" ? "󰸈" : volume < 40 ? "" : volume < 67 ? "" : ""})
+  )
+)
+
+(defwidget mic_volume_scale []
+  (overlay :hexpand true
+    (scale :min 0 :max 101 
+           :active {mic_volume != "muted"} 
+           :value {mic_volume == "muted" ? 0 : mic_volume} 
+           :onchange "pamixer --default-source --set-volume {}" 
+           :class "volume-scale no-slider")
+    (label :class 'volume-icon ${mic_volume == "muted" || mic_volume == 0 ? "less" : mic_volume < 15 ? "less" : "more"}' 
+           :halign "start" 
+           :text {mic_volume == "muted" || mic_volume == 0 ? "󰍭" : mic_volume > 15 ? "󰍬" : "󰍭"})
+  )
+)
+
+(defwidget volume_mic_scale []
+  (box :orientation "v" :spacing 0 ;; Use a box to wrap multiple widgets
+    (mic_volume_scale) ;; Microphone volume scale
+    (volume_scale) ;; Volume scale
+  )
+)
+
+(defwindow ffmenu ;; floating menu
+  :monitor 0
+  :hexpand false
+  :vexpand false
+  :class "ffmenu"
+  :geometry (geometry :x "0px"
+                     :y "0px"
+                     :width "370"
+                     :height "5" ;; Increased height to accommodate weather, brightness, and buttons
+                     :anchor "bottom right")
+  (box :orientation "v" ;; Main vertical box to stack weather, brightness scale, and buttons
+    (label :class "weather" :text WEATHER) ;; Weather label at the top
+    (box :orientation "v" :class "volume-container" ;; Wrapper box for volume and mic volume scales
+      (volume_scale) ;; Volume scale
+      (mic_volume_scale) ;; Microphone volume scale
+    )
+    (box :orientation "h" :spacing 0 ;; Horizontal box for the buttons at the bottom
+      (button :class "fbutton"
+              :onclick "telegram-desktop"
+              " ")
+      (button :class "fbutton"
+              :onclick "firefox"
+              " ")
+      (button :class "fbutton"
+              :onclick "eww close ffmenu && eww close volumec"
+              " "))))
