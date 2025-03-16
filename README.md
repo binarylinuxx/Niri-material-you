@@ -1,10 +1,11 @@
-# Niri-material-you
-my dotfiles of niri using Material You colors + Matugen
+# Niri Material You  
+My dotfiles of Niri using Material You colors + Matugen  
 
-##SCREENS
----
-![img1](screens.png)
+## Screens  
+---  
+![Screenshot](screens.png)  
 
-##KEYBINDS
----
-![img2](keybinds-binary.png)
+## Keybinds  
+---  
+![Keybinds](keybinds-binary.png)  
+
