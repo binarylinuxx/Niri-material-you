@@ -22,10 +22,11 @@ Only if you, like me, want to play around with Material You. And in general, if 
 
 ## TO-DO
 - [goals]:
- -install script [ ]
- -make GTK THEME DEPENDS on wallpaper [X]. requires[mitsugen](https://github.com/DimitrisMilonopoulos/mitsugen)
- -EWW battery widget [ ]
+ - [install script] [ ]
+ - [make GTK THEME DEPENDS on wallpaper] [X]. requires[mitsugen](https://github.com/DimitrisMilonopoulos/mitsugen)
+ - [EWW battery widget] [ ]
 
 ## OTHERS COOL PROJECTS
 [BSPWM BY SOPHRON](https://github.com/sophragoz/dots)
+
 [MY COLLECTION OF DOTFILES](https://github.com/binarylinuxx/binary-dots)
