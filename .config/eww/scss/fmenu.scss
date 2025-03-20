@@ -5,6 +5,7 @@
     border-bottom-right-radius: 0;
     background: $on_secondary;
     font-size: 50px;
+    transition: 0.3s;
 }
 
 .fbutton {
@@ -13,7 +14,7 @@
     color: $on_primary;
     font-size: 50px;
     margin: 3px;
-    padding: 0 13;
+    padding: 0 5;
 }
 
 .weather {

@@ -11,4 +11,4 @@
        (button :class "audio" :onclick "eww open volumec" " ^") ;; Кнопка с текстом из AUDIO
        (label :class "audio" :text AUDIO) ;; Кнопка с текстом из AUDIO
        (label :class "time" :text TIME)
-       (button :class "fmenu" :onclick "eww open ffmenu" "  ")))
+       (button :class "fmenu" :onclick "eww open ffmenu" "^")))

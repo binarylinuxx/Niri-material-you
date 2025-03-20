@@ -5,22 +5,22 @@
                   :class "coc"
                   :geometry (geometry :x "0px"
                                       :y "0px"
-                                      :width "450"
+                                      :width "480"
                                       :height "50"
                                       :anchor "bottom left")
                   (box :orientation "h" ;; vertical box to stack buttons
-                       (button :class "lbutton"
+                       (button :class "cbutton"
                                 :onclick "loginctl poweroff"
                                 "⏻")
                        (button :class "cbutton"
                                 :onclick "loginctl suspend"
                                 "󰤄")
-                       (button :class "qbutton"
+                       (button :class "cbutton"
                        			:onclick "pkill niri"
                        			"󰿅 ")
-                       (button :class "rbutton"
+                       (button :class "cbutton"
                                 :onclick "loginctl reboot"
-                                " ")
+                                "")
                        (button :class "clbutton"
                        			:onclick "eww close coc"
                        			"")))
